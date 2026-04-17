@@ -1,77 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Dev Kumar's Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dev Kumar — Systems Software Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#summary">Summary</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#publications">Publications</a></li>
-            </ul>
-        </nav>
-        <section class="hero">
-            <h1>Welcome to Dev Kumar's Portfolio</h1>
-            <p>A showcase of my work and skills as a Software Engineer.</p>
-        </section>
-    </header>
-    <main>
-        <section id="summary">
-            <h2>Professional Summary</h2>
-            <p>Detail-oriented software engineer with extensive experience in web development.</p>
-        </section>
-        <section id="skills">
-            <h2>Key Skills</h2>
-            <ul>
-                <li>Programming Languages: JavaScript, Python, Java</li>
-                <li>Web Development: HTML, CSS, React</li>
-                <li>Database Management: MySQL, MongoDB</li>
-            </ul>
-        </section>
-        <section id="experience">
-            <h2>Experience</h2>
-            <div>
-                <h3>Software Engineer at ABC Corp</h3>
-                <p>Developed user-friendly web applications and optimized performance.</p>
-                <p>Dates Employed: 2020 - Present</p>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">DK</span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact" class="btn-nav">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg">
+      <canvas id="particles"></canvas>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Systems Software Engineer</p>
+      <h1 class="hero-name">Dev <span class="accent">Kumar</span></h1>
+      <p class="hero-sub">
+        C++17/20 &nbsp;·&nbsp; CUDA / GPU Kernels &nbsp;·&nbsp; HFT &nbsp;·&nbsp; Linux Kernel &nbsp;·&nbsp; Mojo OSS
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-ghost">Get in Touch</a>
+      </div>
+      <div class="hero-badges">
+        <a href="https://github.com/devthedevil" target="_blank" class="badge">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 4.7 18 5 18 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
+          GitHub
+        </a>
+        <a href="https://leetcode.com/u/dev_kumar_dklv/" target="_blank" class="badge">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>
+          LeetCode
+        </a>
+        <a href="https://ieeexplore.ieee.org/document/10094480" target="_blank" class="badge">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
+          IEEE Paper
+        </a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Systems software engineer with <strong>7+ years</strong> designing high-performance
+            C++17/20 libraries, GPU-accelerated kernels, and low-level runtime components across
+            <strong>AI/ML, HFT, and Linux kernel</strong> environments.
+          </p>
+          <p>
+            Hands-on with CUDA, CUTLASS, Triton, PTX/SASS, SIMD, lock-free concurrency, GPU
+            memory hierarchies, and ergonomic API/library design for latency-critical paths.
+            Active open-source maintainer with <strong>accepted contributions to the Mojo Standard Library</strong>.
+          </p>
+          <p>
+            Passionate about modern systems languages (C++, Rust, Swift, Mojo) and advancing the
+            GenAI inference stack on heterogeneous CPU/GPU hardware.
+          </p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-num">7+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">6x</span>
+            <span class="stat-label">GPU Speedup Achieved</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">38%</span>
+            <span class="stat-label">p99 Latency Reduction</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">90%</span>
+            <span class="stat-label">Memory Leak Reduction</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">Key Skills</h2>
+      <div class="skills-grid">
+
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <h3>Systems &amp; Languages</h3>
+          </div>
+          <div class="skill-tags">
+            <span>C++17/20</span><span>C</span><span>Rust</span><span>Swift</span>
+            <span>Python</span><span>Mojo</span><span>Template Metaprogramming</span>
+            <span>RAII</span><span>Move Semantics</span><span>Concepts</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            <h3>GPU &amp; Parallel Computing</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="highlight">CUDA</span><span class="highlight">CUTLASS</span>
+            <span class="highlight">Triton</span><span>PTX / SASS</span>
+            <span>OpenCL</span><span>Tensor Cores</span><span>Warp Primitives</span>
+            <span>Memory Coalescing</span><span>Shared Memory Tiling</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            <h3>Performance &amp; Low-Level</h3>
+          </div>
+          <div class="skill-tags">
+            <span>Lock-Free SPSC/MPMC</span><span>SIMD / AVX</span>
+            <span>Cache-Line Alignment</span><span>NUMA</span><span>Seqlocks</span>
+            <span>Zero-Copy I/O</span><span>Sub-μs Latency</span>
+            <span>perf / VTune / Nsight</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            <h3>Compilers, AI &amp; Libraries</h3>
+          </div>
+          <div class="skill-tags">
+            <span>LLVM / MLIR</span><span>GenAI Inference</span>
+            <span>OpenAI APIs</span><span>PyTorch</span>
+            <span>pybind11</span><span>Python C-Extensions</span>
+            <span>API / Library Design</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            <h3>Open Source &amp; Tooling</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="highlight">Mojo Stdlib Contributor</span>
+            <span>Linux Kernel Drivers</span><span>Docker</span>
+            <span>Kubernetes</span><span>Git / CI/CD</span>
+            <span>TCP/IP</span><span>Multithreading / IPC</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3>Software Engineer</h3>
+                <span class="company">Sprouts AI</span>
+              </div>
+              <span class="timeline-date">Mar 2025 – Present</span>
             </div>
-            <div>
-                <h3>Web Developer at XYZ Inc</h3>
-                <p>Designed and implemented responsive websites.</p>
-                <p>Dates Employed: 2018 - 2020</p>
-            </div>
-            <div>
-                <h3>Intern at Tech Solutions</h3>
-                <p>Assisted in the development of internal tools.</p>
-                <p>Dates Employed: 2017 - 2018</p>
-            </div>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
+            <span class="location">Chicago, IL</span>
             <ul>
-                <li><a href="https://github.com/DevKumar/project1">Project 1</a> - Description of Project 1.</li>
-                <li><a href="https://github.com/DevKumar/project2">Project 2</a> - Description of Project 2.</li>
-                <li><a href="https://github.com/DevKumar/project3">Project 3</a> - Description of Project 3.</li>
+              <li>Designed C++17 library abstractions for an AI hiring platform integrating OpenAI GenAI inference APIs — cut p99 response time by <strong>38%</strong> via cache-aware data layouts and lock-free queuing.</li>
+              <li>Built ergonomic C++ APIs exposed to Python via <strong>pybind11</strong> with zero-copy buffer sharing, eliminating serialization bottlenecks across the inference pipeline.</li>
+              <li>Re-architected core backend in modern C++17 for <strong>40% throughput gain</strong> and <strong>25% memory reduction</strong> on GPU-backed ML servers; authored accepted contributions to the <strong>Mojo Standard Library</strong>.</li>
             </ul>
-        </section>
-        <section id="publications">
-            <h2>Publications</h2>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3>Software Engineer</h3>
+                <span class="company">Resilience Inc</span>
+              </div>
+              <span class="timeline-date">Aug 2023 – Mar 2025</span>
+            </div>
+            <span class="location">Chicago, IL</span>
             <ul>
-                <li>Understanding JavaScript Promises - Journal of Web Development, 2021</li>
-                <li>Building Modern Web Applications - Tech Review, 2022</li>
+              <li>Developed GPU-accelerated C++/CUDA kernels with <strong>CUTLASS &amp; Triton</strong> — shared-memory tiling + warp-level primitives yielded <strong>6× speedup</strong> over CPU baselines.</li>
+              <li>Designed reusable low-level library components (lock-free ring buffers, arena allocators, SIMD helpers) adopted as standard foundation across 3 internal services.</li>
+              <li>Refactored legacy modules into modern C++17, cutting memory leaks by <strong>90%</strong> and average request latency by <strong>15%</strong>; mentored peers on GPU architecture and memory-hierarchy trade-offs.</li>
             </ul>
-        </section>
-    </main>
-    <footer>
-        <p>© 2026 Dev Kumar</p>
-    </footer>
-    <script src="script.js"></script>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3>Software Engineer / IT Project Manager</h3>
+                <span class="company">Tata Steel</span>
+              </div>
+              <span class="timeline-date">Apr 2019 – Aug 2023</span>
+            </div>
+            <ul>
+              <li>Built and maintained Linux kernel-space C/C++ character device drivers with zero-copy DMA paths and kernel synchronization primitives (semaphores, spinlocks, completions).</li>
+              <li>Optimized real-time multithreaded C++ services via NUMA-aware scheduling and lock-free data structures — deterministic <strong>sub-millisecond control loops</strong> across 50+ production nodes.</li>
+              <li>Authored C++ diagnostic tooling using hardware performance counters (perf, PMU) enabling proactive fault detection and a <strong>22% reduction in downtime</strong>.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-top">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3h18v18H3z M3 9h18 M9 21V9"/></svg>
+            <a href="https://github.com/devthedevil/CME-Multicast-Market-Data-Feed-Handler-C-" target="_blank" class="project-link" aria-label="GitHub link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 4.7 18 5 18 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
+            </a>
+          </div>
+          <h3>CME MDP 3.0 Multicast Feed Handler</h3>
+          <p>Sub-microsecond C++20 market-data library with lock-free SPSC queues, seqlock-based book snapshots, per-instrument threading, and cache-line-aligned structures.</p>
+          <div class="project-tags">
+            <span>C++20</span><span>Lock-Free</span><span>SPSC Queues</span><span>HFT</span><span>Seqlocks</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+            <a href="https://github.com/devthedevil/Character-Device-Driver" target="_blank" class="project-link" aria-label="GitHub link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 4.7 18 5 18 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
+            </a>
+          </div>
+          <h3>Linux Character Device Driver</h3>
+          <p>Kernel-space character driver exposing CUDA-accelerated compute via /proc and ioctl with semaphore synchronization, validating low-level memory management across the user/kernel boundary.</p>
+          <div class="project-tags">
+            <span>C</span><span>CUDA</span><span>Linux Kernel</span><span>ioctl</span><span>DMA</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            <a href="https://github.com/devthedevil/EXPOS" target="_blank" class="project-link" aria-label="GitHub link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 4.7 18 5 18 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
+            </a>
+          </div>
+          <h3>EXPOS — Experimental OS</h3>
+          <p>Toy OS with process scheduler, exception/disk-interrupt handlers, and resource allocator supporting 16 processes and 32 semaphores. Deepened expertise in low-level runtime and systems language design.</p>
+          <div class="project-tags">
+            <span>XSM</span><span>EXPL</span><span>OS Design</span><span>Scheduler</span><span>Semaphores</span>
+          </div>
+        </div>
+
+        <div class="project-card featured">
+          <div class="project-top">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+            <a href="https://ieeexplore.ieee.org/document/10094480" target="_blank" class="project-link" aria-label="IEEE paper link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+          <div class="featured-badge">IEEE Publication</div>
+          <h3>Movie Recommendation System</h3>
+          <p>Comparative study using feature engineering and improved error functions. Published at IEEE INCOFT 2021 — DOI: 10.1109/INCOFT55651.2022.10094480.</p>
+          <div class="project-tags">
+            <span>Machine Learning</span><span>Feature Engineering</span><span>IEEE</span><span>Python</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      <div class="edu-grid">
+        <div class="edu-card">
+          <div class="edu-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>
+          </div>
+          <div class="edu-info">
+            <h3>M.S. Computer Science</h3>
+            <p class="edu-school">Illinois Institute of Technology</p>
+          </div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>
+          </div>
+          <div class="edu-info">
+            <h3>B.Tech Computer Science</h3>
+            <p class="edu-school">National Institute of Technology, Calicut</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="contact-sub">Open to senior systems/GPU/HFT engineering roles and open-source collaboration.</p>
+      <div class="contact-links">
+        <a href="mailto:devkumar.dklv@gmail.com" class="contact-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>devkumar.dklv@gmail.com</span>
+        </a>
+        <a href="https://github.com/devthedevil" target="_blank" class="contact-card">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 4.7 18 5 18 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
+          <span>github.com/devthedevil</span>
+        </a>
+        <a href="tel:+13125328223" class="contact-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.37 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 5.55 5.55l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
+          <span>+1 (312) 532-8223</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Built with care &nbsp;·&nbsp; Dev Kumar &nbsp;·&nbsp; Chicago, IL</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
